@@ -16,6 +16,7 @@ var SubscribedAddrTx map[string][]Transaction
 
 func main() {
 
+	go ListenToTransactions()
 	http.HandleFunc("/", handleRequest)
 
 	fmt.Println("Server is running on http://localhost:8080")
